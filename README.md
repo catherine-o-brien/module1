@@ -67,11 +67,11 @@ char* lines[] = {
     "(I think I made you up inside my head.)" 
 };
 int num_lines = 21;
-'''' 
+```
 
 The core loop of the program tells the ESP-32 to alternate between running the correct title sequence and poem text, and the scrambled title sequence and poem text:
 
-''' 
+```
 void loop() {
   
   // Fill screen with grey so we can see the effect of printing with and without 
