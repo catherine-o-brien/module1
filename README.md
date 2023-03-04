@@ -4,6 +4,7 @@ For my first project with my ESP-32, I wanted to combine my dual loves of poetry
 
 If you’re new to the world of embedded systems and looking for a fun and creative way to start, this simple Arduino project is a great way to dip your toes in and learn the basics. Learn how to try this project out for yourself below!
 
+[View this project on my website](https://catherine-o-brien.github.io/scrambled-poetry)
 
 <!--more-->
 
