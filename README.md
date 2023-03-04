@@ -38,10 +38,10 @@ Arduinos use a programming language based on C++, which means that C++ code will
 For my project, I wrote a program in C++ that displayed the text of Sylvia Plath’s poem “Mad Girl’s Love Song” once correctly, and then once jumbled. 
 
 I used the library <TFT_eSPI.h>, which includes graphics and the font library for the ST7735 driver chip. My code invokes that library using this line: 
-''' TFT_eSPI tft = TFT_eSPI(). '''
+``` TFT_eSPI tft = TFT_eSPI(). ```
 
 I hardcoded the text of the poem and the number of lines into the code like so: 
-''' 
+```
 char* lines[] = {
     "I shut my eyes and all the world drops dead;", 
     "I lift my lids and all is born again.",
@@ -93,11 +93,11 @@ void loop() {
   poem_jumbled();
 
 }
-'''
+```
 
 To print the poem's text correctly, the program first clears the screen by filling it with the background color TFT_CYAN. Then, it iterates through the array of the poems lines, printing 2 at a time in order to fit them on the small screen of the ESP-32. The delay() function tells the ESP-32 to wait before executing the next operation so that there is time for the viewer to actually read the text on the screen. 
 
-'''
+```
 void original_poem(){
   int i = 0;
   while (i < num_lines) {
@@ -115,11 +115,11 @@ void original_poem(){
   tft.fillScreen(TFT_CYAN);
   delay(1000);
 }
-'''
+```
 
 To print the scrambled version of the poem's text, I used the random number generator included in <cstdlib>. It clears the screen by filling it with the background color TFT_CYAN. Next, the program gets 2 random numbers that are smaller than the size of the array, and prints the lines of the poem to which those numbers index. It completes this process as many times as there are lines in the poem. Once again, I used the delay() function to provide ample time for the viewer to read the text of the poem before the ESP-32 moves on to the next operation. 
   
-'''
+```
 void poem_jumbled(){
   int i = 0;
 
@@ -138,7 +138,7 @@ void poem_jumbled(){
     delay(2000);
   }
 }
-'''
+```
 
 ## CREDITS
 
